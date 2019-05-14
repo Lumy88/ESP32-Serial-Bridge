@@ -87,7 +87,7 @@ void setup() {
   }
   
   if (client.connect(ClientID, MQTT_user, MQTT_pass)){
-    client.publish(pubTopic, "UART<-->WiFi Bridge Connected", true);
+    client.publish(pubTopic, "UART<-->WiFi Bridge Connected", false);
     client.subscribe(subTopic, qos);
   }
 
