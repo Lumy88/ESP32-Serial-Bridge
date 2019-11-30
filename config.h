@@ -12,6 +12,7 @@ const char* MQTT_pass= "";
 const char* ClientID= "Esp32";
 const char* pubTopic= "Esp32/result";
 const char* subTopic= "Esp32/cmd";
+//when qos == 2, it does not work with my MQTT-GPIO control 
 unsigned char qos= 1; //subscribe qos
 bool retained= false;
 bool debug = false;
