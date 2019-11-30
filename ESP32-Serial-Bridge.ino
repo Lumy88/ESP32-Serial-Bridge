@@ -133,6 +133,24 @@ void loop() {
           if(i1<bufferSize-1) i1++;
         } 
         COM->write(buf1, i1); // now send to UART
+        
+        /*
+        char msg[i1+1];
+        for(int i=0;i<i1;i++){
+          msg[i]=(char)buf1[i];
+        }
+        msg[i1]='\0';
+        String msgT(msg);
+
+        if ( msgT == "open relay1") digitalWrite(relay1, HIGH);
+        else if( msgT == "close relay1") digitalWrite(relay1, LOW);
+        else if ( msgT == "open relay2") digitalWrite(relay2, HIGH);
+        else if ( msgT == "close relay2") digitalWrite(relay2, LOW);
+        else {
+         COM->write(buf1, i1); // now send to UART
+        }
+        */
+        
         i1 = 0;
       }
     }
